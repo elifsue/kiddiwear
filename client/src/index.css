@@ -1,0 +1,661 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --primary: oklch(0.3 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --sidebar-primary: oklch(0.3 0 0);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --chart-1: oklch(0 0 0);
+  --chart-2: oklch(0.2 0 0);
+  --chart-3: oklch(0.4 0 0);
+  --chart-4: oklch(0.6 0 0);
+  --chart-5: oklch(0.8 0 0);
+  --radius: 0.5rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0 0 0);
+  --secondary: oklch(1 0 0);
+  --secondary-foreground: oklch(0 0 0);
+  --muted: oklch(1 0 0);
+  --muted-foreground: oklch(0 0 0);
+  --accent: oklch(1 0 0);
+  --accent-foreground: oklch(0 0 0);
+  --destructive: oklch(0 0 0);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0 0 0);
+  --input: oklch(0 0 0);
+  --ring: oklch(0 0 0);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0 0 0);
+  --sidebar-accent: oklch(1 0 0);
+  --sidebar-accent-foreground: oklch(0 0 0);
+  --sidebar-border: oklch(0 0 0);
+  --sidebar-ring: oklch(0 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+}
+
+/* ─── Lo-fi wireframe image placeholder (X cross pattern) ─── */
+.wireframe-img-placeholder {
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 0;
+  background:
+    linear-gradient(
+      to top right,
+      transparent calc(50% - 0.5px),
+      #000 calc(50% - 0.5px),
+      #000 calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    ),
+    linear-gradient(
+      to bottom right,
+      transparent calc(50% - 0.5px),
+      #000 calc(50% - 0.5px),
+      #000 calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    );
+  background-color: #fff;
+  overflow: hidden;
+}
+/* When no explicit width class is set, default to full width */
+.wireframe-img-placeholder:not([class*="w-"]) {
+  width: 100%;
+  min-height: 60px;
+}
+
+/* ─── Lo-fi circular image placeholder (X cross pattern) ─── */
+.wireframe-circle-placeholder {
+  position: relative;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.wireframe-circle-placeholder::before,
+.wireframe-circle-placeholder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.wireframe-circle-placeholder::before {
+  background: linear-gradient(
+    to top right,
+    transparent calc(50% - 0.5px),
+    #000 calc(50% - 0.5px),
+    #000 calc(50% + 0.5px),
+    transparent calc(50% + 0.5px)
+  );
+}
+.wireframe-circle-placeholder::after {
+  background: linear-gradient(
+    to bottom right,
+    transparent calc(50% - 0.5px),
+    #000 calc(50% - 0.5px),
+    #000 calc(50% + 0.5px),
+    transparent calc(50% + 0.5px)
+  );
+}
+
+/* ─── Lo-fi text line bars ─── */
+.wireframe-text-line {
+  height: 8px;
+  background: #000;
+}
+.wireframe-text-line.full {
+  width: 100%;
+}
+.wireframe-text-line.long {
+  width: 85%;
+}
+.wireframe-text-line.medium {
+  width: 65%;
+}
+.wireframe-text-line.short {
+  width: 45%;
+}
+
+/* ─── Lo-fi inline text bar ─── */
+.wireframe-text-bar {
+  display: inline-block;
+  height: 8px;
+  background: #000;
+  vertical-align: middle;
+}
+
+/* Tight stacking for item card text lines */
+.item-card-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  padding: 4px 0;
+}
+[data-midfi] .item-card-lines,
+[data-hifi] .item-card-lines {
+  gap: 0;
+}
+.item-card-lines .wireframe-text-bar {
+  display: block;
+}
+
+/* ─── Shell container should not inherit wireframe styles ─── */
+.shell-container {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ─── Fullscreen toast fade-in-out animation ─── */
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+.animate-fade-in-out {
+  animation: fade-in-out 3s ease-in-out forwards;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Mid-Fi: Remove rounded corners from containers and buttons
+   Uses [data-midfi] attribute on the page wrapper to flatten border-radius.
+   Hi-Fi mode uses [data-hifi] which has its own radius overrides below.
+   ═══════════════════════════════════════════════════════════════════════════ */
+[data-midfi] .rounded:not(.rounded-full),
+[data-midfi] .rounded-sm:not(.rounded-full),
+[data-midfi] .rounded-md:not(.rounded-full),
+[data-midfi] .rounded-lg:not(.rounded-full),
+[data-midfi] .rounded-xl:not(.rounded-full),
+[data-midfi] .rounded-t:not(.rounded-full),
+[data-midfi] .rounded-t-sm:not(.rounded-full),
+[data-midfi] .rounded-t-md:not(.rounded-full),
+[data-midfi] .rounded-t-lg:not(.rounded-full),
+[data-midfi] .rounded-b:not(.rounded-full),
+[data-midfi] .rounded-b-sm:not(.rounded-full),
+[data-midfi] .rounded-b-md:not(.rounded-full),
+[data-midfi] .rounded-b-lg:not(.rounded-full),
+[data-midfi] .rounded-tr-none,
+[data-midfi] .rounded-tl-none,
+[data-midfi] .rounded-br-none,
+[data-midfi] .rounded-bl-none {
+  border-radius: 0 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Hi-Fi Design System Overrides
+   When [data-hifi] is present on the page wrapper, apply the full MD3 color system.
+   CSS variables are injected dynamically by DesignSystemContext on :root.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* --- Base page styling --- */
+[data-hifi] {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background-color: var(--ds-surface);
+}
+
+/* --- Headings --- */
+[data-hifi] h1,
+[data-hifi] h2,
+[data-hifi] h3 {
+  color: var(--ds-on-surface);
+}
+
+/* --- Gray text → DS text tokens --- */
+[data-hifi] .text-gray-900 {
+  color: var(--ds-on-surface) !important;
+}
+[data-hifi] .text-gray-800 {
+  color: var(--ds-on-surface) !important;
+}
+[data-hifi] .text-gray-700 {
+  color: var(--ds-on-surface) !important;
+}
+[data-hifi] .text-gray-600 {
+  color: var(--ds-on-surface-variant) !important;
+}
+[data-hifi] .text-gray-500 {
+  color: var(--ds-on-surface-variant) !important;
+}
+[data-hifi] .text-gray-400 {
+  color: var(--ds-on-surface-variant) !important;
+}
+[data-hifi] .text-gray-300 {
+  color: var(--ds-outline-variant) !important;
+}
+
+/* --- Background → DS surface tokens --- */
+[data-hifi] .bg-gray-50 {
+  background-color: var(--ds-surface-container-low) !important;
+}
+[data-hifi] .bg-gray-100 {
+  background-color: var(--ds-surface-container) !important;
+}
+[data-hifi] .bg-gray-200 {
+  background-color: var(--ds-surface-container-high) !important;
+}
+[data-hifi] .bg-gray-300 {
+  background-color: var(--ds-surface-container-highest) !important;
+}
+/* bg-gray-400: used for progress bar fills → primary, but decorative dots should use onSurfaceVariant */
+[data-hifi] .bg-gray-400.rounded-full:not(.h-full) {
+  background-color: var(--ds-on-surface-variant) !important;
+}
+[data-hifi] .bg-gray-400.h-full {
+  background-color: var(--ds-primary) !important;
+}
+[data-hifi] .bg-gray-400:not(.rounded-full):not(.h-full) {
+  background-color: var(--ds-on-surface-variant) !important;
+}
+[data-hifi] .bg-gray-800 {
+  background-color: var(--ds-primary) !important;
+}
+
+/* --- MD3 Pairing: text-white on primary bg must use onPrimary --- */
+[data-hifi] .bg-gray-800.text-white,
+[data-hifi] .bg-gray-800 > .text-white {
+  color: var(--ds-on-primary) !important;
+}
+[data-hifi] .bg-gray-800 .text-white {
+  color: var(--ds-on-primary) !important;
+}
+
+/* --- MD3 Pairing: bg-black maps to inverseSurface, text-white on it uses onInverseSurface --- */
+[data-hifi] .bg-black {
+  background-color: var(--ds-inverse-surface) !important;
+}
+[data-hifi] .bg-black.text-white,
+[data-hifi] .bg-black .text-white {
+  color: var(--ds-on-inverse-surface) !important;
+}
+
+/* --- MD3 Pairing: bg-white maps to surface, text-black on it uses onSurface --- */
+[data-hifi] .bg-white {
+  background-color: var(--ds-surface-container-lowest) !important;
+}
+[data-hifi] .text-black {
+  color: var(--ds-on-surface) !important;
+}
+
+/* --- MD3 Pairing: text on surfaceVariant (bg-gray-100) must use onSurfaceVariant --- */
+[data-hifi] .bg-gray-100 .text-gray-700,
+[data-hifi] .bg-gray-100 .text-gray-800,
+[data-hifi] .bg-gray-100.text-gray-700,
+[data-hifi] .bg-gray-100.text-gray-800 {
+  color: var(--ds-on-surface-variant) !important;
+}
+
+/* --- Border → DS outline tokens --- */
+[data-hifi] .border-gray-100 {
+  border-color: var(--ds-outline-variant) !important;
+}
+[data-hifi] .border-gray-200 {
+  border-color: var(--ds-outline-variant) !important;
+}
+[data-hifi] .border-gray-300 {
+  border-color: var(--ds-outline) !important;
+}
+[data-hifi] .border-gray-400 {
+  border-color: var(--ds-outline) !important;
+}
+[data-hifi] .border-gray-800 {
+  border-color: var(--ds-primary) !important;
+}
+
+/* --- Cards and containers --- */
+[data-hifi] .border.rounded,
+[data-hifi] .border.rounded-lg,
+[data-hifi] .border.rounded-md {
+  border-color: var(--ds-outline-variant);
+  border-radius: 12px;
+}
+
+/* --- Shadows for cards --- */
+[data-hifi] .shadow-sm {
+  box-shadow: var(--ds-shadow) !important;
+}
+[data-hifi] .shadow {
+  box-shadow: var(--ds-shadow-md) !important;
+}
+[data-hifi] .hover\:shadow-md:hover {
+  box-shadow: var(--ds-shadow-md) !important;
+}
+
+/* --- Form inputs --- */
+[data-hifi] input[type="text"],
+[data-hifi] input[type="email"],
+[data-hifi] input[type="password"],
+[data-hifi] input[type="number"],
+[data-hifi] input[type="tel"],
+[data-hifi] input[type="url"],
+[data-hifi] textarea,
+[data-hifi] select {
+  border-color: var(--ds-outline) !important;
+  border-radius: 8px !important;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+[data-hifi] input:focus,
+[data-hifi] textarea:focus,
+[data-hifi] select:focus {
+  border-color: var(--ds-primary) !important;
+  box-shadow: var(--ds-focus-ring) !important;
+  outline: none !important;
+}
+
+/* --- Labels --- */
+[data-hifi] label {
+  color: var(--ds-on-surface);
+  font-weight: 500;
+}
+
+/* --- Links --- */
+[data-hifi] a.underline,
+[data-hifi] button.underline,
+[data-hifi] span.underline {
+  color: var(--ds-primary);
+}
+[data-hifi] a.underline:hover,
+[data-hifi] button.underline:hover,
+[data-hifi] span.underline:hover {
+  opacity: 0.8;
+}
+
+/* Mid-fi underline hover */
+a.underline:hover,
+button.underline:hover,
+span.underline:hover {
+  opacity: 0.7;
+}
+
+/* --- Dividers / horizontal rules --- */
+[data-hifi] .divide-gray-100 > * + * {
+  border-color: var(--ds-outline-variant) !important;
+}
+[data-hifi] .divide-gray-200 > * + * {
+  border-color: var(--ds-outline-variant) !important;
+}
+[data-hifi] .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--ds-outline-variant) !important;
+}
+[data-hifi] hr {
+  border-color: var(--ds-outline-variant) !important;
+}
+[data-hifi] .border-b.border-gray-100 {
+  border-color: var(--ds-outline-variant) !important;
+}
+[data-hifi] .border-b.border-gray-200 {
+  border-color: var(--ds-outline-variant) !important;
+}
+
+/* --- Badges and pills --- */
+[data-hifi] .rounded-full.border {
+  border-color: var(--ds-outline-variant);
+}
+[data-hifi] .rounded-full.bg-gray-100 {
+  background-color: var(--ds-surface-container) !important;
+}
+
+/* --- Status badges → MD3 container/onContainer pairings --- */
+/* Green status (success) → secondaryContainer/onSecondaryContainer */
+[data-hifi] .bg-green-50 {
+  background-color: var(--ds-secondary-container) !important;
+}
+[data-hifi] .text-green-600 {
+  color: var(--ds-on-secondary-container) !important;
+}
+[data-hifi] .text-green-700 {
+  color: var(--ds-on-secondary-container) !important;
+}
+/* Yellow status (warning) → tertiaryContainer/onTertiaryContainer */
+[data-hifi] .bg-yellow-50 {
+  background-color: var(--ds-tertiary-container) !important;
+}
+[data-hifi] .text-yellow-600 {
+  color: var(--ds-on-tertiary-container) !important;
+}
+[data-hifi] .text-yellow-700 {
+  color: var(--ds-on-tertiary-container) !important;
+}
+/* Red status (error/danger) → errorContainer/onErrorContainer */
+[data-hifi] .bg-red-50 {
+  background-color: var(--ds-error-container) !important;
+}
+[data-hifi] .text-red-600 {
+  color: var(--ds-on-error-container) !important;
+}
+[data-hifi] .text-red-700 {
+  color: var(--ds-on-error-container) !important;
+}
+/* Blue status (info) → primaryContainer/onPrimaryContainer */
+[data-hifi] .bg-blue-50 {
+  background-color: var(--ds-primary-container) !important;
+}
+[data-hifi] .text-blue-600 {
+  color: var(--ds-on-primary-container) !important;
+}
+[data-hifi] .text-blue-700 {
+  color: var(--ds-on-primary-container) !important;
+}
+[data-hifi] .bg-blue-500 {
+  background-color: var(--ds-primary) !important;
+}
+[data-hifi] .bg-blue-500.text-white,
+[data-hifi] .bg-blue-500 .text-white {
+  color: var(--ds-on-primary) !important;
+}
+
+/* --- Tabs / active states --- */
+[data-hifi] .border-b-2.border-gray-800 {
+  border-color: var(--ds-primary) !important;
+}
+
+/* --- Star ratings --- */
+[data-hifi] .text-yellow-400 {
+  color: var(--ds-tertiary) !important;
+}
+[data-hifi] .text-yellow-500 {
+  color: var(--ds-tertiary) !important;
+}
+
+/* --- Progress bars --- */
+[data-hifi] .bg-green-500 {
+  background-color: var(--ds-primary) !important;
+}
+[data-hifi] .bg-gray-100.rounded-full {
+  background-color: var(--ds-surface-container-highest) !important;
+}
+
+/* --- Toggle switches, active pills, buttons --- */
+[data-hifi] .hover\:bg-gray-700:hover {
+  background-color: var(--ds-primary) !important;
+  opacity: 0.9;
+}
+[data-hifi] .hover\:text-gray-800:hover {
+  color: var(--ds-on-surface) !important;
+}
+[data-hifi] .hover\:border-gray-400:hover {
+  border-color: var(--ds-outline) !important;
+}
+[data-hifi] .hover\:border-gray-500:hover {
+  border-color: var(--ds-on-surface) !important;
+}
+[data-hifi] .hover\:text-gray-900:hover {
+  color: var(--ds-on-surface) !important;
+}
+[data-hifi] .hover\:text-gray-700:hover {
+  color: var(--ds-on-surface-variant) !important;
+}
+
+/* --- Scrollbar styling --- */
+[data-hifi]::-webkit-scrollbar {
+  width: 6px;
+}
+[data-hifi]::-webkit-scrollbar-track {
+  background: var(--ds-surface-container-low);
+}
+[data-hifi]::-webkit-scrollbar-thumb {
+  background: var(--ds-on-surface-variant);
+  border-radius: 3px;
+}
+
+/* --- Placeholder image overrides --- */
+[data-hifi] .bg-gray-100.flex.items-center.justify-center {
+  background-color: var(--ds-surface-container) !important;
+}
+
+/* --- Section label styling --- */
+[data-hifi] .uppercase.tracking-wider {
+  color: var(--ds-on-surface) !important;
+  letter-spacing: 0.05em;
+}
+
+/* --- Icon stroke color override --- */
+[data-hifi] svg.text-gray-400 {
+  color: var(--ds-on-surface-variant) !important;
+}
+[data-hifi] svg.text-gray-500 {
+  color: var(--ds-on-surface-variant) !important;
+}
+
+/* --- Ring/focus ring --- */
+[data-hifi] .ring-gray-200 {
+  --tw-ring-color: var(--ds-outline) !important;
+}
+[data-hifi] .ring-gray-300 {
+  --tw-ring-color: var(--ds-outline) !important;
+}
+
+/* --- Hover states --- */
+[data-hifi] .hover\:bg-gray-50:hover {
+  background-color: var(--ds-surface-container-low) !important;
+}
+[data-hifi] .hover\:bg-gray-100:hover {
+  background-color: var(--ds-surface-container) !important;
+}
+
+/* --- Rounded corners upgrade --- */
+[data-hifi] .rounded {
+  border-radius: 8px !important;
+}
+[data-hifi] .rounded-md {
+  border-radius: 10px !important;
+}
+[data-hifi] .rounded-lg {
+  border-radius: 12px !important;
+}
+[data-hifi] .rounded-xl {
+  border-radius: 16px !important;
+}
