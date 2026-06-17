@@ -11,7 +11,7 @@ interface ScreensSidebarProps {
 
 export default function ScreensSidebar({ isOpen }: ScreensSidebarProps) {
   const [location] = useLocation();
-  const { isLofi, isMidfi } = useFidelityMode();
+  const { isLofi } = useFidelityMode();
   const sidebarNavRef = useRef<HTMLElement>(null);
   const activeItemRef = useRef<HTMLAnchorElement>(null);
 
@@ -135,7 +135,7 @@ export default function ScreensSidebar({ isOpen }: ScreensSidebarProps) {
           style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
           <p className="text-[10px] text-center" style={{ color: "#5a5a7a" }}>
-            {isLofi ? "Lo-fi" : isMidfi ? "Mid-fi" : "Hi-fi"} prototypes
+            {isLofi ? "Lo-fi" : "Hi-fi"} prototypes
             &middot; Desktop
           </p>
         </div>
