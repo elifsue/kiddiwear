@@ -13,7 +13,7 @@ import { PROFILE_PHOTOS } from "@/photos/profilePhotos";
 import { Link } from "wouter";
 
 export default function CreateBundle() {
-  const { isLofi, isHifi } = useFidelityMode();
+  const { isLofi, isMidfi, isHifi } = useFidelityMode();
   useDSSync();
 
   /* ── Lo-Fi ── */

@@ -24,7 +24,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   );
   const [fsToastOpacity, setFsToastOpacity] = useState(0);
   const fsToastTimers = useRef<ReturnType<typeof setTimeout>[]>([]);
-  const { isLofi, isHifi, setMode } = useFidelityMode();
+  const { isLofi, isMidfi, isHifi, setMode } = useFidelityMode();
   useDSSync(); // Sync DS object with context colors on every render
 
   const currentIndex = screens.findIndex(s => s.path === location);
@@ -82,7 +82,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       } else if (e.key === "ArrowRight" && currentIndex < screens.length - 1) {
         navigate(screens[currentIndex + 1].path);
       } else if (e.key === "t" || e.key === "T") {
-        setMode(isLofi ? "hifi" : "lofi");
+        setMode(isLofi ? "midfi" : isMidfi ? "hifi" : "lofi");
       } else if (e.key === "f" || e.key === "F") {
         setFullScreen(prev => {
           if (!prev) showFsToast();
@@ -94,7 +94,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [fullScreen, showHelp, currentIndex, navigate, isLofi, isHifi, setMode]);
+  }, [fullScreen, showHelp, currentIndex, navigate, isLofi, isMidfi, isHifi, setMode]);
 
   /* ── Fullscreen toast helpers ── */
   const clearFsTimers = () => {
@@ -152,7 +152,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
           {[
             { keys: ["←"], desc: "Previous screen" },
             { keys: ["→"], desc: "Next screen" },
-            { keys: ["T"], desc: "Toggle Lo-Fi / Hi-Fi mode" },
+            { keys: ["T"], desc: "Cycle Lo-Fi / Mid-Fi / Hi-Fi mode" },
             { keys: ["F"], desc: "Toggle full-screen mode" },
             { keys: ["Esc"], desc: "Exit full-screen or close overlay" },
             { keys: ["?"], desc: "Show / hide this help" },

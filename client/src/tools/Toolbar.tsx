@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Menu, X, Pencil, Maximize2, HelpCircle, Sparkles } from "lucide-react";
+import { Menu, X, Eye, Pencil, Maximize2, HelpCircle, Sparkles } from "lucide-react";
 import { useFidelityMode } from "@/contexts/FidelityModeContext";
 import ColorPaletteTool from "./ColorPaletteTool";
 import { screens } from "./screens";
@@ -20,7 +20,7 @@ export default function Toolbar({
   onShowHelp,
 }: ToolbarProps) {
   const [location] = useLocation();
-  const { mode, setMode, isLofi, isHifi, figmaCaptureMode, setFigmaCaptureMode } =
+  const { mode, setMode, isLofi, isMidfi, isHifi, figmaCaptureMode, setFigmaCaptureMode } =
     useFidelityMode();
 
   const currentScreen = screens.find(s => s.path === location);
@@ -76,7 +76,18 @@ export default function Toolbar({
           <Pencil size={12} />
           Lo-Fi
         </button>
-
+        <button
+          onClick={() => setMode("midfi")}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-200"
+          style={{
+            background: isMidfi ? "#ffffff" : "transparent",
+            color: isMidfi ? "#6366f1" : "#888",
+            boxShadow: isMidfi ? "0 1px 3px rgba(0,0,0,0.1)" : "none",
+          }}
+        >
+          <Eye size={12} />
+          Mid-Fi
+        </button>
         <button
           onClick={() => setMode("hifi")}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-200"
