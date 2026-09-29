@@ -3,39 +3,57 @@
 // Men: 2, 6, 14
 // With kids: 5, 10
 
+import profile01 from "@/assets/profiles/profile-01.png";
+import profile02 from "@/assets/profiles/profile-02.png";
+import profile03 from "@/assets/profiles/profile-03.png";
+import profile04 from "@/assets/profiles/profile-04.png";
+import profile05 from "@/assets/profiles/profile-05.png";
+import profile06 from "@/assets/profiles/profile-06.png";
+import profile07 from "@/assets/profiles/profile-07.png";
+import profile08 from "@/assets/profiles/profile-08.png";
+import profile09 from "@/assets/profiles/profile-09.png";
+import profile10 from "@/assets/profiles/profile-10.png";
+import profile11 from "@/assets/profiles/profile-11.png";
+import profile12 from "@/assets/profiles/profile-12.png";
+import profile13 from "@/assets/profiles/profile-13.png";
+import profile14 from "@/assets/profiles/profile-14.png";
+import profile15 from "@/assets/profiles/profile-15.png";
+import profile16 from "@/assets/profiles/profile-16.png";
+import profile17 from "@/assets/profiles/profile-17.png";
+
 export const PROFILE_PHOTOS = {
   // Woman - 30s, grey tee, living room with toys
-  p1: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-01-hVXVEQneCEJ5PsPDegr7MF.webp",
+  p1: profile01,
   // Man - 30s, blue shirt, kitchen with kids drawings
-  p2: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-02-h5jsDag6uY2sreuiJm49c6.webp",
+  p2: profile02,
   // Woman - late 20s, curly dark hair, garden
-  p3: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-03-3FspyxpxNCmE9Bm3Cc3qx2.webp",
+  p3: profile03,
   // Woman - 40s, blonde, autumn park bench
-  p4: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-04-TZGu8nYAK4EHJpketdSX8k.webp",
+  p4: profile04,
   // Woman with toddler - 30s, striped top, hallway
-  p5: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-05-JVK9G5DeebYsifkjhzVxoQ.webp",
+  p5: profile05,
   // Man - late 30s, glasses, backyard fence
-  p6: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-06-RacwrWRrcGjpgVnRM5YUpn.webp",
+  p6: profile06,
   // Woman - late 20s, denim jacket, residential street
-  p7: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-07-DxTkFekKxo9UVJiXkaHrkD.webp",
+  p7: profile07,
   // Woman - 30s, red hair, cafe
-  p8: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-08-iBSwX8XibQyzj5LQKdF9Qy.webp",
+  p8: profile08,
   // Woman - 30s, pixie cut, kitchen
-  p9: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-09-eSvEWjhcGEL9mknZbAPuZA.webp",
+  p9: profile09,
   // Man with child on shoulders - 40s, park
-  p10: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-10-6YhKgbmbnwunjiyxMKMzRn.webp",
+  p10: profile10,
   // Woman - late 30s, auburn hair, grey hoodie, doorframe
-  p11: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-11-bDGhtiyKpUbsTJWJUhPAYA.webp",
+  p11: profile11,
   // Woman - mid 20s, braided dark hair, mustard sweater, bookshelf
-  p12: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-12-F3SnHfHUd2uDWneP2or8eS.webp",
+  p12: profile12,
   // Woman - 30s, brown hair, white linen shirt, balcony
-  p13: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-13-7s2JZ2iZxBinJpRV65DXqe.webp",
+  p13: profile13,
   // Man - 30s, dark curly hair, henley, couch
-  p14: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-14-ma9TFujvxGD9PyyhNgjJFS.webp",
+  p14: profile14,
   // Woman - late 30s, glasses, blue cardigan, garden
-  p15: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-15-9Qaw8UR2xo8QK5dQADpHMH.webp",
+  p15: profile15,
   // Woman - late 20s, blonde messy bun, cream sweater, kitchen
-  p16: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-16-c8RByXY8Ey9U29D9SgKqtD.webp",
+  p16: profile16,
   // Woman - early 30s, dark brown straight hair, olive cardigan, sunlit hallway
-  p17: "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/profile-17-4oXs7ocj655Ddkk4eZHuVT.webp",
+  p17: profile17,
 } as const;

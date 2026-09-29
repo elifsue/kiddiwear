@@ -5,10 +5,18 @@
  * with variable width to appear visually equal in size.
  */
 
+import bankTransferIcon from "@/assets/payment/bank-transfer.png";
+import paypalIcon from "@/assets/payment/paypal.png";
+import bankCardIcon from "@/assets/payment/bank-card.png";
+import visaIcon from "@/assets/payment/visa.png";
+import mastercardIcon from "@/assets/payment/mastercard.png";
+import googlePayIcon from "@/assets/payment/google-pay.png";
+import applePayIcon from "@/assets/payment/apple-pay.png";
+
 export function BankTransferIcon({ size = 20 }: { size?: number }) {
   return (
     <img
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/tapOgXRAQOqBrHQt.png"
+      src={bankTransferIcon}
       alt="Bank Transfer"
       width={size}
       height={size}
@@ -21,7 +29,7 @@ export function PayPalIcon({ size = 20 }: { size?: number }) {
   // Original content: 128x128 → aspect ratio 1:1
   return (
     <img
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/IUlZKzdwGsFYwvwB.png"
+      src={paypalIcon}
       alt="PayPal"
       height={size}
       style={{ height: size, width: size, objectFit: "contain" }}
@@ -34,7 +42,7 @@ export function BankCardIcon({ size = 20 }: { size?: number }) {
   const width = Math.round(size * (128 / 94));
   return (
     <img
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/pGjTIpWybxdKCbTI.png"
+      src={bankCardIcon}
       alt="Bank Card"
       height={size}
       style={{ height: size, width, objectFit: "contain" }}
@@ -45,7 +53,7 @@ export function BankCardIcon({ size = 20 }: { size?: number }) {
 export function VisaIcon({ size = 20 }: { size?: number }) {
   return (
     <img
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/tFdqHJLnzQyHzPTK.png"
+      src={visaIcon}
       alt="Visa"
       width={size}
       height={size}
@@ -57,7 +65,7 @@ export function VisaIcon({ size = 20 }: { size?: number }) {
 export function MastercardIcon({ size = 20 }: { size?: number }) {
   return (
     <img
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/oVlybsOJOQjOutbl.png"
+      src={mastercardIcon}
       alt="Mastercard"
       width={size}
       height={size}
@@ -71,7 +79,7 @@ export function GooglePayIcon({ size = 20 }: { size?: number }) {
   const width = Math.round(size * (128 / 56));
   return (
     <img
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/FEOSzKlzQmcCVqFW.png"
+      src={googlePayIcon}
       alt="Google Pay"
       height={size}
       style={{ height: size, width, objectFit: "contain" }}
@@ -84,7 +92,7 @@ export function ApplePayIcon({ size = 20 }: { size?: number }) {
   const width = Math.round(size * (128 / 60));
   return (
     <img
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/xlMkrRLEJSNlULKk.png"
+      src={applePayIcon}
       alt="Apple Pay"
       height={size}
       style={{ height: size, width, objectFit: "contain" }}

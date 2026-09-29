@@ -7,6 +7,7 @@ import { DS, useDSSync } from "@/contexts/DesignSystem";
 import { ActionButton } from "./ActionButton";
 import { SearchBar } from "./SearchBar";
 import { ProfileDropdownMenu } from "@/dialogs/ProfileDropdownMenu";
+import { LOGO_MARK, LOGO_WORDMARK } from "@/assets";
 
 export function NavigationBar({
   hideAccountLinks = false,
@@ -114,12 +115,12 @@ export function NavigationBar({
         <div className="flex items-center justify-between px-6 py-3">
           <Link to={ROUTES.HOME} className="flex items-center gap-2">
             <img
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/zeAnyiNIJppqyNeF.png"
+              src={LOGO_MARK}
               alt="Kiddiwear"
               className="w-8 h-8 object-contain"
             />
             <img
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/ebPqvJTHoZreTCxY.png"
+              src={LOGO_WORDMARK}
               alt="Kiddiwear"
               className="h-6 object-contain"
             />

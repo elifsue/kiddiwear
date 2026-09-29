@@ -12,6 +12,7 @@ import { TextInputFieldMultiLine } from "@/components/TextInputFieldMultiLine";
 import { SearchBar } from "@/components/SearchBar";
 import { AttachmentsInputField } from "@/components/AttachmentsInputField";
 import { useFidelityMode } from "@/contexts/FidelityModeContext";
+import { HELP_CENTRE_QA } from "@/assets";
 
 export default function HelpCentre() {
   const { isLofi, isHifi } = useFidelityMode();
@@ -403,7 +404,7 @@ export default function HelpCentre() {
                 {isHifi ? (
                   <div className="absolute inset-0 flex items-center justify-center p-8 overflow-hidden">
                     <img
-                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/iGboKeGCQyDUgbtX.png"
+                      src={HELP_CENTRE_QA}
                       alt="Q&A chat bubbles"
                       className="rounded"
                       style={{

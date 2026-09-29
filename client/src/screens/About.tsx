@@ -7,6 +7,7 @@ import { ActionButton } from "@/components/ActionButton";
 import { Footer } from "@/components/Footer";
 import { NavigationBar } from "@/components/NavigationBar";
 import { useFidelityMode } from "@/contexts/FidelityModeContext";
+import { LOGO_WORDMARK, ABOUT_MISSION, ABOUT_BUYER_PROTECTION } from "@/assets";
 
 export default function About() {
   const { isLofi, isHifi } = useFidelityMode();
@@ -183,7 +184,7 @@ export default function About() {
               <span className="inline-flex items-center gap-3">
                 About{" "}
                 <img
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/ebPqvJTHoZreTCxY.png"
+                  src={LOGO_WORDMARK}
                   alt="Kiddiwear"
                   className="h-6 inline-block object-contain"
                 />
@@ -220,7 +221,7 @@ export default function About() {
             </div>
             {isHifi ? (
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/about-mission-KAHsBoxSczWg5iEQRNPbfq.webp"
+                src={ABOUT_MISSION}
                 alt="Our Mission"
                 className="w-[360px] h-[240px] rounded flex-shrink-0 object-cover"
               />
@@ -372,7 +373,7 @@ export default function About() {
           <div className="flex gap-8 items-center">
             {isHifi ? (
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/buyer-protection-3x2-YcqVFEzH6h3QNshu3KDXma.webp"
+                src={ABOUT_BUYER_PROTECTION}
                 alt="Buyer Protection"
                 className="w-[360px] h-[240px] rounded flex-shrink-0 object-cover"
               />

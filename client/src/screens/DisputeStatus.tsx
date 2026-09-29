@@ -11,10 +11,10 @@ import { BadgeLabel } from "@/components/BadgeLabel";
 import { useFidelityMode } from "@/contexts/FidelityModeContext";
 import { PhotoInputField } from "@/components/PhotoInputField";
 import { PROFILE_PHOTOS } from "@/photos/profilePhotos";
+import { LOGO_MARK } from "@/assets";
 import { Link } from "wouter";
 
-const KIDDIWEAR_LOGO =
-  "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/zeAnyiNIJppqyNeF.png";
+const KIDDIWEAR_LOGO = LOGO_MARK;
 
 const timelineSteps = [
   { label: "Dispute Submitted", date: "5 Apr 2026, 14:32", done: true },

@@ -6,6 +6,13 @@ import { ActionButton } from "@/components/ActionButton";
 import { Footer } from "@/components/Footer";
 import { NavigationBar } from "@/components/NavigationBar";
 import { useFidelityMode } from "@/contexts/FidelityModeContext";
+import {
+  LOGO_WORDMARK,
+  HOW_IT_WORKS_STEP_1,
+  HOW_IT_WORKS_STEP_2,
+  HOW_IT_WORKS_STEP_3,
+  HOW_IT_WORKS_STEP_4,
+} from "@/assets";
 
 const steps = [
   {
@@ -220,7 +227,7 @@ export default function HowItWorks() {
               <span className="inline-flex items-center gap-3">
                 How{" "}
                 <img
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/ebPqvJTHoZreTCxY.png"
+                  src={LOGO_WORDMARK}
                   alt="Kiddiwear"
                   className="h-6 inline-block object-contain"
                 />{" "}
@@ -316,7 +323,7 @@ export default function HowItWorks() {
             </div>
             {isHifi ? (
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/AKbXpntsZTfqUVKe.jpg"
+                src={HOW_IT_WORKS_STEP_1}
                 alt="Step 1 - Snap a photo"
                 className="w-[360px] h-[240px] rounded flex-shrink-0 object-cover"
               />
@@ -336,7 +343,7 @@ export default function HowItWorks() {
           <div className="flex gap-8 items-center">
             {isHifi ? (
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/wAeDMOjOBUNJVvnU.png"
+                src={HOW_IT_WORKS_STEP_2}
                 alt="Step 2 - Set your price"
                 className="w-[360px] h-[240px] rounded flex-shrink-0 object-cover"
               />
@@ -435,7 +442,7 @@ export default function HowItWorks() {
             </div>
             {isHifi ? (
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/oNEQvnwGCoIWrASx.jpg"
+                src={HOW_IT_WORKS_STEP_3}
                 alt="Step 3 - Sell & ship"
                 className="w-[360px] h-[240px] rounded flex-shrink-0 object-cover"
               />
@@ -455,7 +462,7 @@ export default function HowItWorks() {
           <div className="flex gap-8 items-center">
             {isHifi ? (
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/howitworks-step4-MAsYJECEKekPfaDBFk5XEL.webp"
+                src={HOW_IT_WORKS_STEP_4}
                 alt="Step 4 - Get paid"
                 className="w-[360px] h-[240px] rounded flex-shrink-0 object-cover"
               />

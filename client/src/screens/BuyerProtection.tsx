@@ -8,6 +8,7 @@ import { ActionButton } from "@/components/ActionButton";
 import { Footer } from "@/components/Footer";
 import { NavigationBar } from "@/components/NavigationBar";
 import { useFidelityMode } from "@/contexts/FidelityModeContext";
+import { BUYER_PROTECTION_REFUND } from "@/assets";
 
 export default function BuyerProtection() {
   const { isLofi, isHifi } = useFidelityMode();
@@ -368,7 +369,7 @@ export default function BuyerProtection() {
             </div>
             {isHifi ? (
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/buyer-protection-refund-94v2fDWciDYVgFCe6Ydvr2.webp"
+                src={BUYER_PROTECTION_REFUND}
                 alt="Refund Process"
                 className="w-[360px] h-[240px] rounded flex-shrink-0 object-cover"
               />

@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { NavigationBar } from "@/components/NavigationBar";
 import { TextInputField } from "@/components/TextInputField";
 import { useFidelityMode } from "@/contexts/FidelityModeContext";
+import { LOGO_MARK } from "@/assets";
 import { Link } from "wouter";
 
 export default function ChangePassword() {
@@ -95,7 +96,7 @@ export default function ChangePassword() {
           <div className="text-center mb-8">
             {isHifi ? (
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/zeAnyiNIJppqyNeF.png"
+                src={LOGO_MARK}
                 alt="Kiddiwear"
                 className="w-12 h-12 object-contain mx-auto mb-4"
               />

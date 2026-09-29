@@ -4,6 +4,7 @@ import { useFidelityMode } from "@/contexts/FidelityModeContext";
 import { ROUTES } from "@/routes";
 import { FacebookIcon, InstagramIcon, LinkedInIcon } from "@/icons/SocialIcons";
 import { DS, useDSSync } from "@/contexts/DesignSystem";
+import { LOGO_MARK, LOGO_WORDMARK } from "@/assets";
 import { TextPlaceholder } from "./TextPlaceholder";
 
 export function Footer() {
@@ -103,12 +104,12 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/zeAnyiNIJppqyNeF.png"
+                src={LOGO_MARK}
                 alt="Kiddiwear"
                 className="w-6 h-6 object-contain"
               />
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/ebPqvJTHoZreTCxY.png"
+                src={LOGO_WORDMARK}
                 alt="Kiddiwear"
                 className="h-5 object-contain"
               />

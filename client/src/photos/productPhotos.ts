@@ -1,26 +1,47 @@
 /* ─── Product images for Hi-Fi mode (4:5 aspect ratio, children's clothing catalog) ─── */
 /* 20 product photos showcasing various children's clothing items */
+import product01Tshirt from "@/assets/products/product-01-tshirt.png";
+import product02Dress from "@/assets/products/product-02-dress.png";
+import product03Jacket from "@/assets/products/product-03-jacket.png";
+import product04Raincoat from "@/assets/products/product-04-raincoat.png";
+import product05Shoes from "@/assets/products/product-05-shoes.png";
+import product06Hoodie from "@/assets/products/product-06-hoodie.png";
+import product07Sweatshirt from "@/assets/products/product-07-sweatshirt.png";
+import product08Shorts from "@/assets/products/product-08-shorts.png";
+import product09Bag from "@/assets/products/product-09-bag.png";
+import product10Watch from "@/assets/products/product-10-watch.png";
+import product11Pants from "@/assets/products/product-11-pants.png";
+import product12Skirt from "@/assets/products/product-12-skirt.png";
+import product13Hat from "@/assets/products/product-13-hat.png";
+import product14Hoodie2 from "@/assets/products/product-14-hoodie2.png";
+import product15Tshirt2 from "@/assets/products/product-15-tshirt2.png";
+import product16Dress2 from "@/assets/products/product-16-dress2.png";
+import product17Boots from "@/assets/products/product-17-boots.png";
+import product18Polo from "@/assets/products/product-18-polo.png";
+import product19Wintercoat from "@/assets/products/product-19-wintercoat.png";
+import product20Messenger from "@/assets/products/product-20-messenger.png";
+
 export const productImages = [
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-01-tshirt-PhzFpLMhPri3pjxMyHi33P.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-02-dress-S6pJPG3xSPSpk5GFF6RLo2.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-03-jacket-mGd5C8jxfsYqp9xMeRfqWs.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-04-raincoat-6xR5ZsyZTgH6vTG4u9F4KB.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-05-shoes-4hR64fenXoitBWXqox3oyX.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-06-hoodie-4j2jyL7YaCv8RZxPmRcFnt.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-07-sweatshirt-doqY5xGUsCfzp9yNrRDpSe.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-08-shorts-V6hEoSjQpnbpKRWjUwYDKe.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-09-bag-Tya4AhZQYFGNH6f9gRR8KG.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-10-watch-MSPJ3Jz37n32J6DPrphWnc.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-11-pants-2323rtPJVXmr2Rnj656arU.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-12-skirt-4RGitJeMeYXNdP5Bzx3Tmc.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-13-hat-JmJVJ37PpaDnsmznNLdhSU.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-14-hoodie2-UZfWLhnZhFBgjgVq8FruoQ.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-15-tshirt2-Ww2MCo82gp9UdVEkkekMHd.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-16-dress2-AXD3t7XK5iUU4wUSHZMy7x.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-17-boots-eyKErh5LJQNrjCX97gNcgn.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-18-polo-HvkY8LpgSJ4Y8LgShAhDHY.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-19-wintercoat-WVLeHTbLcSxDUUsE9tcYzY.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/product-new-20-messenger-AFvTn7CGtTTE9LDRX7YkYT.webp",
+  product01Tshirt,
+  product02Dress,
+  product03Jacket,
+  product04Raincoat,
+  product05Shoes,
+  product06Hoodie,
+  product07Sweatshirt,
+  product08Shorts,
+  product09Bag,
+  product10Watch,
+  product11Pants,
+  product12Skirt,
+  product13Hat,
+  product14Hoodie2,
+  product15Tshirt2,
+  product16Dress2,
+  product17Boots,
+  product18Polo,
+  product19Wintercoat,
+  product20Messenger,
 ];
 
 let imgCounter = 0;

@@ -7,6 +7,8 @@ import { useLocation } from "wouter";
 import { ROUTES } from "@/routes";
 import { useRef, useEffect } from "react";
 import { Dialog, DialogContent, DialogTitle } from "@/ui/dialog";
+import pickupInpostMarker from "@/assets/delivery/pickup-inpost.png";
+import pickupEvriMarker from "@/assets/delivery/pickup-evri.png";
 
 interface PickupPointDialogProps {
   open: boolean;
@@ -496,8 +498,8 @@ export default function PickupPointDialog({
                     key={i}
                     src={
                       marker.type === "InPost"
-                        ? "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/ApnYmXHOvgnhqAAT.svg"
-                        : "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/WSVaGtkyAnPbOhZI.svg"
+                        ? pickupInpostMarker
+                        : pickupEvriMarker
                     }
                     alt={marker.type}
                     className="absolute w-8 h-8 object-contain drop-shadow-md"

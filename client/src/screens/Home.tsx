@@ -11,6 +11,13 @@ import { Carousel } from "@/components/Carousel";
 import { useFidelityMode } from "@/contexts/FidelityModeContext";
 import { Link } from "wouter";
 import { ChipItem } from "@/components/ChipItem";
+import {
+  LOGO_WORDMARK,
+  HERO_BOY_LEFT,
+  HERO_GIRL_RIGHT,
+  CATEGORY_IMAGES,
+  BRAND_LOGOS,
+} from "@/assets";
 export default function Home() {
   const { isLofi, isHifi } = useFidelityMode();
   useDSSync();
@@ -277,7 +284,7 @@ export default function Home() {
         <div className="absolute left-6 top-0 bottom-0 w-[280px] flex items-end justify-center overflow-hidden">
           {isHifi ? (
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/hero-boy-left-v3-irtGPy28hnooBjS9m2GtVU.png"
+              src={HERO_BOY_LEFT}
               alt="Happy boy in yellow hoodie"
               className="h-[85%] w-auto object-contain object-bottom"
             />
@@ -293,7 +300,7 @@ export default function Home() {
           {isHifi ? (
             <div className="flex justify-center mb-4">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/ebPqvJTHoZreTCxY.png"
+                src={LOGO_WORDMARK}
                 alt="Kiddiwear"
                 className="h-8 object-contain"
               />
@@ -330,7 +337,7 @@ export default function Home() {
         <div className="absolute right-6 top-0 bottom-0 w-[280px] flex items-end justify-center overflow-hidden">
           {isHifi ? (
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/hero-girl-right-v3-KWZLZUWqU2cMwKkCbdHovP.png"
+              src={HERO_GIRL_RIGHT}
               alt="Happy girl in coral cardigan waving"
               className="h-[85%] w-auto object-contain object-bottom"
             />
@@ -346,13 +353,7 @@ export default function Home() {
         <SectionHeader>Shop by Category</SectionHeader>
         <div className="grid grid-cols-5 gap-4">
           {["Boys", "Girls", "Unisex", "Shoes", "Accessories"].map((cat, i) => {
-            const catImgs = [
-              "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/category-boys-v4-CiTViQhhjj6VvEubdAuyrT.webp",
-              "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/category-girls-v4-E2JRkugfCn9VGGRNoZvtoz.webp",
-              "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/yaSMtDGTyJwcWfwN.png",
-              "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/category-shoes-3x2-ameYjqyiH426N4hxi82DTh.webp",
-              "https://d2xsxph8kpxj0f.cloudfront.net/310519663332337268/5dAnQahEr3KsPSbq9QaW5W/category-accessories-landscape-j97FGmJ78W7Nm6qJUjJNVM.webp",
-            ];
+            const catImgs = CATEGORY_IMAGES;
             return (
               <Link key={cat} to={ROUTES.PRODUCTS} className="block">
                 <div
@@ -450,27 +451,27 @@ export default function Home() {
             ? [
                 {
                   name: "Primark",
-                  logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/aIlswJKgaYXLwTyZ.png",
+                  logo: BRAND_LOGOS.primark,
                 },
                 {
                   name: "Next",
-                  logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/HwVqzugtqUOynter.png",
+                  logo: BRAND_LOGOS.next,
                 },
                 {
                   name: "Zara",
-                  logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/riFDoRmexTmtabaA.png",
+                  logo: BRAND_LOGOS.zara,
                 },
                 {
                   name: "H&M",
-                  logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/QjiSpCQgNYiFMiPT.png",
+                  logo: BRAND_LOGOS.hm,
                 },
                 {
                   name: "M&S",
-                  logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/iHZCpPpJCmfFVlBx.png",
+                  logo: BRAND_LOGOS.ms,
                 },
                 {
                   name: "John Lewis",
-                  logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/CUWEoSkGbkOotqij.png",
+                  logo: BRAND_LOGOS.johnLewis,
                 },
               ]
             : [

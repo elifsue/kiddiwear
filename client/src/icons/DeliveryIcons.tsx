@@ -4,10 +4,14 @@
  * All icons use h-8 (32px) height with auto width to match original inline styling.
  */
 
+import royalMailIcon from "@/assets/delivery/royal-mail.png";
+import evriIcon from "@/assets/delivery/evri.png";
+import inpostIcon from "@/assets/delivery/inpost.png";
+
 export function RoyalMailIcon({ size = 32 }: { size?: number }) {
   return (
     <img
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/haahgbEPjBaURVpA.svg"
+      src={royalMailIcon}
       alt="Royal Mail"
       className="object-contain"
       style={{ height: size, width: "auto" }}
@@ -18,7 +22,7 @@ export function RoyalMailIcon({ size = 32 }: { size?: number }) {
 export function EvriIcon({ size = 32 }: { size?: number }) {
   return (
     <img
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/UqAMbxAOtsdZaHXd.png"
+      src={evriIcon}
       alt="Evri"
       className="object-contain"
       style={{ height: size, width: "auto" }}
@@ -29,7 +33,7 @@ export function EvriIcon({ size = 32 }: { size?: number }) {
 export function InPostIcon({ size = 32 }: { size?: number }) {
   return (
     <img
-      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663332337268/anGQAwrCKEQvWdYH.svg"
+      src={inpostIcon}
       alt="InPost"
       className="object-contain"
       style={{ height: size, width: "auto" }}
